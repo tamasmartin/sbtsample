@@ -13,4 +13,8 @@ class TomCalc {
     a - b
   }
 
+  def multiply(a: Int, b:Int): Int = {
+    a * b
+  }
+
 }
