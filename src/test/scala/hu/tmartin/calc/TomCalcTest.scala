@@ -7,19 +7,24 @@ import org.scalatest.{FunSuite, Matchers}
   */
 class TomCalcTest extends FunSuite with Matchers {
 
-  test("Testing the add function"){
+  test("Testing the add function") {
     val c = new TomCalc
-    c.add(3,4) shouldBe(7)
+    c.add(3, 4) shouldBe (7)
   }
 
-  test("Testing the minus function"){
+  test("Testing the minus function") {
     val c = new TomCalc
-    c.minus(3,4) shouldBe(-1)
+    c.minus(3, 4) shouldBe (-1)
   }
 
-  test("Testing the multiply function"){
+  test("Testing the multiply function") {
     val c = new TomCalc
-    c.multiply(3,4) shouldBe(12)
+    c.multiply(3, 4) shouldBe (12)
+  }
+
+  test("Testing divide") {
+    val c = new TomCalc
+    c.divide(10,10) shouldBe(1)
   }
 
 }
