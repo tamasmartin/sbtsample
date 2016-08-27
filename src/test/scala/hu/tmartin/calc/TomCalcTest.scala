@@ -1,6 +1,6 @@
 package hu.tmartin.calc
 
-import org.scalatest.{FunSpec, FunSuite, Matchers}
+import org.scalatest.{FunSuite, Matchers}
 
 /**
   * Created by Tamás on 2016-08-27.
@@ -15,6 +15,11 @@ class TomCalcTest extends FunSuite with Matchers {
   test("Testing the minus function"){
     val c = new TomCalc
     c.minus(3,4) shouldBe(-1)
+  }
+
+  test("Testing the multiply function"){
+    val c = new TomCalc
+    c.multiply(3,4) shouldBe(12)
   }
 
 }
