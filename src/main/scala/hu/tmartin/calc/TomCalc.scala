@@ -17,6 +17,7 @@ class TomCalc {
     a * b
   }
 
+  
   def divide(a: Double, b: Double): Double = {
     a / b
   }
