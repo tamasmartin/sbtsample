@@ -13,11 +13,11 @@ class TomCalc {
     a - b
   }
 
-  def multiply(a: Int, b:Int): Int = {
+  def multiply(a: Int, b: Int): Int = {
     a * b
   }
 
-  def divide(a: Int, b:Int): Double = {
+  def divide(a: Double, b: Double): Double = {
     a / b
   }
 
