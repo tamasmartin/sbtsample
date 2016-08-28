@@ -16,7 +16,7 @@ libraryDependencies in ThisBuild ++= Seq(
 testOptions in ThisBuild += Tests.Argument(TestFrameworks.ScalaTest, "-h", "target/html-reports")
 
 publishTo := {
-  val nexus = "https://localhost:8081/"
+  val nexus = "https://10.0.2.15:8081/"
   if (isSnapshot.value)
     Some("snapshots" at nexus + "content/repositories/snapshots")
   else
