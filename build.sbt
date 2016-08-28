@@ -1,4 +1,6 @@
-name := "scala"
+name := "Scala Calculator"
+
+organization := "hu.calculator"
 
 version := "0.1-SNAPSHOT"
 
