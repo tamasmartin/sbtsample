@@ -4,12 +4,22 @@ version := "1.0"
 
 scalaVersion := "2.11.8"
 
-libraryDependencies += "org.scala-lang" % "scala-library" % "2.11.8"
+libraryDependencies in ThisBuild ++= Seq(
+  "org.scalatest" %% "scalatest" % "3.0.0" % "test",
+  "org.scalactic" %% "scalactic" % "3.0.0",
+  "org.pegdown" % "pegdown" % "1.4.2" % "test",
+  "org.scala-lang" % "scala-library" % "2.11.8"
+)
 
-libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.0"
+testOptions in ThisBuild += Tests.Argument(TestFrameworks.ScalaTest, "-h", "target/html-reports")
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test->*" excludeAll (
-  ExclusionRule(organization = "org.junit", name = "junit")
-  )
+publishTo := {
+  val nexus = "https://localhost:8081/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+}
 
-testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-h", "target/html-reports")
+credentials += Credentials("Nexus Repository Manager", "localhost", "admin", "admin123")
+
