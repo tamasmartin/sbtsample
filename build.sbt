@@ -23,5 +23,5 @@ publishTo := {
     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
 }
 
-credentials += Credentials("Nexus Repository Manager", "localhost", "admin", "admin123")
+credentials += Credentials("Nexus Repository Manager", "10.0.2.15", "admin", "admin123")
 
