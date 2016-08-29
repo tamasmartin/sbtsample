@@ -31,4 +31,9 @@ class TomCalcTest extends FunSuite with Matchers {
     val c = new TomCalc
     c.avg(10.0,10.0) shouldBe(10.0)
   }
+
+  test("Testing avg[3]") {
+    val c = new TomCalc
+    c.avg(1,2,3) shouldBe(2)
+  }
 }

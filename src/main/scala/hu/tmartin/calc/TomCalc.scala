@@ -25,4 +25,8 @@ class TomCalc {
   def avg(a: Double, b: Double): Double = {
     (a + b) / 2
   }
+
+  def avg(a: Double, b: Double, c: Double): Double = {
+    (a + b + c) / 3
+  }
 }
