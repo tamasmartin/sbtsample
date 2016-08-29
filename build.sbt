@@ -2,7 +2,7 @@ name := "Scala Calculator"
 
 organization := "hu.calculator"
 
-version := "0.1-SNAPSHOT"
+version := "0.1"
 
 scalaVersion := "2.11.8"
 
